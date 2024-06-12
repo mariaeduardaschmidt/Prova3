@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faculdade Municipal de Palhoça.</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    background-position: center;
+    color: #68afff;
+    background-image: url('fundo.jpg');
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+  }
+
+  header {
+    background-color: #97c1ff;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  header nav ul {
+    list-style: none;
+  }
+
+  header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .destaque {
+    padding: 30px 0;
+    text-align: center;
+    color: #000000;
+    flex: 1;
+    margin-top: 80px;
+  }
+
+  .destaque h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 90px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    color: #005eac;
+  }
+
+  .destaque h1 span {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .destaque p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+  }
+
+  .card {
+    width: calc(33.33% - 40px);
+    margin: 20px;
+    max-width: 450px;
+    min-width: 700px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    color: #005eac;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #577db0;
+  }
+
+  .card p {
+    color: #000000;
+    font-family: 'Lato', sans-serif;
+    text-align: justify center;
+  }
+
+  .card.expanded {
+    max-width: none;
+    width: 45%;
+    margin: 20px auto 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: default;
+  }
+
+  .card.expanded:hover {
+    transform: scale(1);
+  }
+
+  .card button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .card .buy-button {
+    background-color: #005eac;
+    color: #fff;
+    border: none;
+  }
+
+  .card .minimize-button {
+    background-color: #fff;
+    color: #005eac;
+    border: 1px solid #5287fa;
+  }
+
+  footer {
+    background-color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 8px;
+    bottom: 0;
+    position:fixed; 
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+  }
+
+  @media (min-width: 768px) {
+    .card {
+      width: calc(33.33% - 60px);
+      margin: 15px;
+    }
+  }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index2.html">Sobre</a></li>
+        <li><a href="index3.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="destaque">
+    <h1>FMP</h1>
+    <div class="card-container">
+      <a href="http://fmpsc.edu.br/" target="_blank" class="card">
+        <img src="C:\Users\ADS\Desktop\Prova\fmp.jpeg" alt="fmp">
+        <h2>A Faculdade Municipal de Palhoça é uma instituição de ensino superior localizada na cidade de Palhoça, em Santa Catarina, Brasil. Fundada em 2005, tem como objetivo oferecer cursos de qualidade e acessíveis à comunidade local. Oferece uma variedade de cursos de graduação e pós-graduação em diversas áreas do conhecimento, buscando contribuir para o desenvolvimento educacional e socioeconômico da região. Além disso, a instituição se destaca por s corpo docente qualificado e parcerias com empresas e instituições locais para promover a empregabilidade dos seus graduados.</h2>
+        <p>FMP</p>
+      </div>
+
+  <script>
+    function expandCard(event, card) {
+      event.stopPropagation(); 
+
+      const expandedCard = document.querySelector('.card.expanded');
+      if (expandedCard) {
+        minimizeCard(event, expandedCard);
+      }
+  
+      card.classList.add('expanded');
+      card.innerHTML += `
+      `;
+  
+      document.querySelectorAll('.card:not(.expanded)').forEach(c => c.style.display = 'none');
+    }
+  
+    function minimizeCard(event, card) {
+      event.stopPropagation();
+  
+      card.classList.remove('expanded');
+      card.querySelector('.buy-button').remove();
+      card.querySelector('.minimize-button').remove();
+  
+      document.querySelectorAll('.card').forEach(c => c.style.display = 'block');
+    }
+  </script>
+
+<footer>
+  <p>&copy; Maria Eduarda Schmidt.</p>
+</footer>
+  
+</body>
+</html>
