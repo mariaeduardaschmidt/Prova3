@@ -85,6 +85,7 @@
   .card-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     align-items: flex-start;
     flex-wrap: wrap;
     text-decoration: none;
@@ -92,7 +93,7 @@
   }
 
   .card {
-    width: calc(33.33% - 40px);
+    width: 70%;
     margin: 20px;
     max-width: 450px;
     min-width: 700px;
@@ -100,6 +101,8 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    margin: 20px 0;
+    text-align: center;
     text-align: left;
     color: #005eac;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -118,13 +121,15 @@
     font-size: 24px;
     margin-bottom: 10px;
     color: #577db0;
-    text-align: justify center;
+    text-align:center;
+    text-decoration: none;
   }
 
   .card p {
     color: #000000;
     font-family: 'Lato', sans-serif;
-    text-align: justify center;
+    text-align: center;
+    text-decoration: none;
   }
 
   .card.expanded {
@@ -148,6 +153,7 @@
     cursor: pointer;
     border-radius: 5px;
     font-family: 'Lato', sans-serif;
+    text-decoration: none;
   }
 
   .card .buy-button {
@@ -175,7 +181,7 @@
 
   @media (min-width: 768px) {
     .card {
-      width: calc(33.33% - 60px);
+      width: 50%;
       margin: 15px;
     }
   }
@@ -196,26 +202,42 @@
   <section class="destaque">
     <h1>Cursos de Graduação:</h1>
     <div class="card-container">
-      <a href="http://fmpsc.edu.br/course/processos-gerenciais/" target="_blank" class="card">
-        <h2>Processos Gerenciais.</h2>
-      </a>
-      <a href="http://fmpsc.edu.br/course/ads/" target="_blank" class="card">
-        <h2>Análise e Desenvolvimento de Sistemas.</h2>
-      </a>
-      <a href="http://fmpsc.edu.br/course/administracao/" target="_blank" class="card">
-        <h2>Administração.</h2>
-      </a> 
-      <a href="http://fmpsc.edu.br/course/pedagogia/" target="_blank" class="card">
-        <h2>Pedagogia.</h2>
-      </a> 
-      <h1></h1>
-      <h1>Cursos de Pós-Graduação:</h1>
-      <a href="http://fmpsc.edu.br/course/gestao-e-docencia-na-educacao-e-integral/" target="_blank" class="card">
-        <h2>Gestão Escolar.</h2>
-        <a href="http://fmpsc.edu.br/course/maths/" target="_blank" class="card">
-          <h2>Gestão Empresarial.</h2>
+      <div class="card">
+        <a href="http://fmpsc.edu.br/course/processos-gerenciais/" target="_blank">
+          <h2>Processos Gerenciais.</h2>
+        </a>
       </div>
-</section>
+      <div class="card">
+        <a href="http://fmpsc.edu.br/course/ads/" target="_blank">
+          <h2>Análise e Desenvolvimento de Sistemas.</h2>
+        </a>
+      </div>
+      <div class="card">
+        <a href="http://fmpsc.edu.br/course/administracao/" target="_blank">
+          <h2>Administração.</h2>
+        </a>
+      </div>
+      <div class="card">
+        <a href="http://fmpsc.edu.br/course/pedagogia/" target="_blank">
+          <h2>Pedagogia.</h2>
+        </a>
+      </div>
+    </div>
+  
+    <h1>Cursos de Pós-Graduação:</h1>
+    <div class="card-container">
+      <div class="card">
+        <a href="http://fmpsc.edu.br/course/gestao-e-docencia-na-educacao-e-integral/" target="_blank">
+          <h2>Gestão Escolar.</h2>
+        </a>
+      </div>
+      <div class="card">
+        <a href="http://fmpsc.edu.br/course/maths/" target="_blank">
+          <h2>Gestão Empresarial.</h2>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; Maria Eduarda Schmidt.</p>
